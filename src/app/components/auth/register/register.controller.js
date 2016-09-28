@@ -1,6 +1,13 @@
 function RegisterController(AuthService) {
     var ctrl = this;
 
+    /*
+        Intialization logic using lifecycle hook.
+
+        ctrl.user we can intially bind, and will delegate into the auth-form.
+        Once that auth-form has been submitted we can use this new user object
+        to pass it off to the register function inside of the service.
+    */
     ctrl.$onInit = function() {
         ctrl.error = null;
         ctrl.user = {

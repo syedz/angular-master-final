@@ -1,3 +1,8 @@
+/*
+    This is the stateful component.
+    Because this is a view (or a page), it is a rooted component.
+*/
+
 var login = {
     templateUrl: './login.html',
     controller: 'LoginController'
@@ -11,7 +16,7 @@ angular
             .state('auth', {
                 redirectTo: 'auth.login',
                 url: '/auth',
-                template: '<div ui-view></div>'
+                template: '<div ui-view></div>' // Dynamic view, no need to create its own components for it (below we are)
             })
             .state('auth.login', {
                 url: '/login',

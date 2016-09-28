@@ -1,6 +1,7 @@
 function LoginController(AuthService) {
     var ctrl = this;
 
+    // Intialization logic using lifecycle hook
     ctrl.$onInit = function() {
         ctrl.error = null;
         ctrl.user = {

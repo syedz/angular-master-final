@@ -1,3 +1,7 @@
+/*
+    This is what will communicate with the Firebase server.
+*/
+
 function AuthService($firebaseAuth) {
     var auth = $firebaseAuth();
     var authData = null;
