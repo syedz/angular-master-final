@@ -1,4 +1,4 @@
-function LoginController(AuthService) {
+function LoginController(AuthService, $state) {
     var ctrl = this;
 
     // Intialization logic using lifecycle hook
@@ -14,7 +14,9 @@ function LoginController(AuthService) {
         return AuthService
             .login(event.user)
             .then(function(user) {
-                console.log('SUCCESS:', user);
+                // console.log('SUCCESS:', user);
+                // Fully authorized
+                $state.go('app');
             }, function(reason) {
                 ctrl.error = reason.message;
             });

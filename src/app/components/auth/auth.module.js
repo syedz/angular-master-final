@@ -19,4 +19,29 @@ angular
         });
 
     firebase.initializeApp(config);
+  })
+  .run(function($transitions, $state, AuthService){
+
+      /*
+        Called on every transition that requires an authentication. If
+        there is a problem, catch() fires.
+      */
+      $transitions.onStart({
+          to: function(state) {
+              return !!(state.data && state.data.requiredAuth); // returns true or false
+          }
+      }, function() {
+          return AuthService.requireAuthentication()
+          .catch(function() {
+              return $state.target('auth.login');
+          });
+      });
+
+      $transitions.onStart({
+          to: 'auth.*'
+      }, function() {
+          if (AuthService.isAuthenticated()) {
+              return $state.target('app');
+          }
+      });
   });
