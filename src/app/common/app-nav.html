@@ -9,6 +9,14 @@
         </a>
       </div>
       <div class="header__logout">
+        <!--
+          :: Tells Angular to delete reference of email from memory to make our
+          application faster one binding at a time. Too many data bindings in an
+          application can effect the load time. When specifying bindings with
+          {{}}, they are watched and dirty checked by Angular when changes
+          occur. When user's email is populated, it's statically rendered, and
+          if changed, it doesn't re-render it.
+        -->
         {{ ::$ctrl.user.email }}
         <a href="" ng-click="$ctrl.onLogout();">
           <span class="header__button">

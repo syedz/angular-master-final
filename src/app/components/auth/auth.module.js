@@ -25,6 +25,8 @@ angular
       /*
         Called on every transition that requires an authentication. If
         there is a problem, catch() fires.
+
+        Below are transitions hooks
       */
       $transitions.onStart({
           to: function(state) {

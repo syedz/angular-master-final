@@ -44,7 +44,7 @@ function AuthService($firebaseAuth) {
     };
 
     this.isAuthenticated = function() {
-        return !!authData; // null || {user}
+        return !!authData; // will be null or {user}
     };
 
     this.getUser = function() {

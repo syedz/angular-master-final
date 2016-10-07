@@ -1,3 +1,7 @@
+/*
+    This is a stateless component
+*/
+
 var appNav = {
     bindings: {
         user: '<',
