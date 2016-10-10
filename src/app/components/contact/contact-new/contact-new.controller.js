@@ -1,4 +1,4 @@
-function ContactNewController(ContactService) {
+function ContactNewController(ContactService, $state) {
     var ctrl = this;
 
     // Using lifecycle hooks
@@ -24,7 +24,9 @@ function ContactNewController(ContactService) {
             .createNewContact(event.contact)
             .then(function(contact) {
                 // Success
-                console.log(contact);
+                $state.go('contact', {
+                  id: contact.key
+                });
             });
     };
 }
