@@ -1,6 +1,7 @@
 /*
     This is the stateful component.
     Because this is a view (or a page), it is a rooted component.
+    Because this is rooted component, we have a config().
 */
 
 var register = {
