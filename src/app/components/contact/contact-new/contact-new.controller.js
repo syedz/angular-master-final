@@ -1,7 +1,13 @@
 function ContactNewController(ContactService, $state) {
     var ctrl = this;
 
-    // Using lifecycle hooks
+    /*
+      Using lifecycle hooks
+
+      Using ctrl.contact across our forms. Each of these properties will
+      correspond to a binding in the actual form that we create to go and create
+      an actual contact.
+    */
     ctrl.$onInit = function() {
         ctrl.contact = {
             name: '',

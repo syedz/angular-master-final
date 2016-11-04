@@ -1,4 +1,5 @@
 function ContactService(AuthService, $firebaseRef, $firebaseArray, $firebaseObject) {
+    // Reference to the URL for the database that we created in auth.module.js
     var ref = $firebaseRef.contacts;
     var uid = AuthService.getUser().uid;
 

@@ -13,7 +13,7 @@ angular
     .config(function($stateProvider) {
         $stateProvider
             .state('new', {
-                parent: 'app',
+                parent: 'app', // A child of 'app' state in app.component.js
                 url: '/new',
                 component: 'contactNew'
             });

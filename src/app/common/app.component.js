@@ -6,6 +6,9 @@
 
     As soon as authorization is done, we can redirec to /app, where we can
     have child states such as apps/contacts, etc.
+
+    No need to add data: { requiredAuth: true } to every state because other
+    state, that is a child of the app state, simply inherits it. 
 */
 
 var app = {
