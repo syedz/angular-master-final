@@ -29,6 +29,10 @@ function ContactDetailController() {
         });
     };
 
+    /*
+      Not providing ability to untag a contact, but could create a 'None'
+      tag to denote untagging a contact.
+     */
     ctrl.tagChange = function(event) {
       ctrl.contact.tag = event.tag;
       ctrl.updateContact();
