@@ -8,7 +8,7 @@
     have child states such as apps/contacts, etc.
 
     No need to add data: { requiredAuth: true } to every state because other
-    state, that is a child of the app state, simply inherits it. 
+    state, that is a child of the app state, simply inherits it.
 */
 
 var app = {
@@ -22,7 +22,7 @@ angular
     .config(function($stateProvider) {
         $stateProvider
             .state('app', {
-                // redirectTo: 'contacts'
+                redirectTo: 'contacts',
                 url: '/app',
                 data: {
                     requiredAuth: true

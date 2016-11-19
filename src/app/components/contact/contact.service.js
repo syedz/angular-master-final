@@ -10,6 +10,9 @@ function ContactService(AuthService, $firebaseRef, $firebaseArray, $firebaseObje
         getContactById: function(id) {
           return $firebaseObject(ref.child(uid).child(id));
         },
+        getContactList: function() {
+          return $firebaseArray(ref.child(uid));
+        },
         updateContact: function(contact) {
           return contact.$save();
         },
