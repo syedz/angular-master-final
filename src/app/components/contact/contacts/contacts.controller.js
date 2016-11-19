@@ -1,9 +1,11 @@
-function ContactsController() {
+function ContactsController($state) {
   var ctrl = this;
 
   // Get contacts ID through an event
   ctrl.goToContact = function(event) {
-    // $state.go('contact', { id: event.contactId })
+    $state.go('contact', {
+      id: event.contactId
+    });
   };
 }
 
