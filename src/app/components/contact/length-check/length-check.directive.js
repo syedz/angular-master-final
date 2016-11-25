@@ -26,6 +26,7 @@ function lengthCheck() {
           // Gives current view value of the input that it's bound to
           return $ctrl.$viewValue;
         }, function(newValue) {
+          // Change listener that is called when the value returned from the above function changes
           if (newValue) {
             $element.removeClass(dynamicClass);
           } else {
